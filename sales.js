@@ -1,32 +1,78 @@
 'use strict';
 
-var stores = [store1stPike,];
-
+var i = 0;
 
 //object example
 var store1stPike = {
-  salesMin: '23',
-  salesMax: '65',
-  salesAvg:'6.3',
+  storeMin: 23,
+  storeMax: 65,
+  storeAvg:6.3,
+  customerCapacitys:[],
+  customerHours:[],
+  customerGen : function (){
+    for (i = 0; i < 15; i++) {
+      this.customerCapacity.push(Math.floor(Math.random()*(this.storeMax-this.storeMin)+this.storeMin));
+    }
+  }
 };
 
+var storeSeatacAirport = {
+  storeMin: 3,
+  storeMax: 24,
+  storeAvg:1.2,
+  customerCapacitys:[],
+  customerHours:[],
+  customerGen : function (){
+    for (i = 0; i < 15; i++) {
+      this.customerCapacity.push(Math.floor(Math.random()*(this.storeMax-this.storeMin)+this.storeMin));
+    }
+  }
+};
 
-//Changing the title
-var heading = document.getElementById('title');
-heading.textContent = exampleObjectThing.title;
-heading.setAttribute('class', 'cool box button');
+var storeSeattleCenter = {
+  storeMin: 11,
+  storeMax: 38,
+  storeAvg: 3.7,
+  customerCapacitys:[],
+  customerHours:[],
+  customerGen : function (){
+    for (i = 0; i < 15; i++) {
+      this.customerCapacity.push(Math.floor(Math.random()*(this.storeMax-this.storeMin)+this.storeMin));
+    }
+  }
+};
 
-var listListUl = document.getElementById('list');
-//Create a li tag for each string in the object
-//Fill that li with the string of the object
-//Put he new li at the end of listListUl (using appendChild)
+var storeCapitalHill = {
+  storeMin: 20,
+  storeMax: 38,
+  storeAvg:2.3,
+  customerCapacitys:[],
+  customerHours:[],
+  customerGen : function (){
+    for (i = 0; i < 15; i++) {
+      this.customerCapacity.push(Math.floor(Math.random()*(this.storeMax-this.storeMin)+this.storeMin));
+    }
+  }
+};
 
-var thingLi;
-for (var i = 0; i < exampleObjectThing ;i++){
-  console.log('exampleObjectThing.item of i',exampleObjectThing.item[1]);
-  thingLi= document.createElement('li');
+var storeAlki = {
+  storeMin: 2,
+  storeMax: 16,
+  storeAvg: 4.6,
+  customerCapacitys:[],
+  customerHours:[],
+  customerGen : function (){
+    for (i = 0; i < 15; i++) {
+      this.customerCapacity.push(Math.floor(Math.random()*(this.storeMax-this.storeMin)+this.storeMin));
+    }
+  }
+};
 
-  thingLi.textContent = exampleObjectThing.item[1];
-  thingLi.appendChild(thingLi);
-
-}
+var stores = [
+  store1stPike,
+  storeSeatacAirport,
+  storeSeattleCenter,
+  storeCapitalHill,
+  storeAlki
+];
+console.log(stores[0].customerGen());
