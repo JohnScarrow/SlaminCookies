@@ -128,3 +128,40 @@ for (i = 0; i < 15; i++) {
   console.log(predictAlki);
   alkiStoreTitle.textcontent = storeAlki.customerCapacity[i];}
 console.log('Total:' + AlkiTotal + ' cookies');
+
+
+var stores = [
+  store1stPike,
+  storeSeatacAirport,
+  storeSeattleCenter,
+  storeCapitalHill,
+  storeAlki
+];
+
+i = 0;
+var j = 0;
+
+var storesUl = document.getElementById('stores');
+
+for (i = 0; i < stores.length; i++ ){
+  storeContent = document.getElementById('title');
+  storeContent.textcontent = stores[i];
+  storeContent.setAttribute('class', 'title');
+}
+i = 0;
+var storesLi;
+var cookieLi;
+for (i = 0; i < stores.length; i++ ){
+  storesLi = document.createElement('li');
+  storesLi.setAttribute('class', 'grocery-item');
+  storesLi.textContent = stores[i].customerCapacity;
+  storesUl.textContent = stores[i];
+  storesUl.appendChild(storesLi);
+  for (j = 0; j < hours.length; j++) {
+    console.log(stores[i].customerCapacity[j]);
+    cookieLi = document.createElement('li');
+    cookieLi.setAttribute('class', 'grocery-item');
+    cookieLi.textContent = stores[i].customerCapacity[j];
+    storesLi.appendChild(cookieLi);
+  }
+}
