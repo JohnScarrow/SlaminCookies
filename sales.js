@@ -2,6 +2,7 @@
 
 var i = 0;
 var hours = ['6am','7am','8am','9am', '10am', '11am', '12pm','1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
+
 //object example
 var store1stPike = {
   storeMin: 23,
@@ -75,4 +76,9 @@ var stores = [
   storeCapitalHill,
   storeAlki
 ];
-console.log(stores[0].customerGen());
+
+var predict = [];
+i=0;
+for (i=0; i < 5; i++){
+  predict[i]=(hours[i]+' sold '+ stores[i].customerCapacity);
+}
