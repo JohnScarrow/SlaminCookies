@@ -5,100 +5,126 @@ var hours = ['6am','7am','8am','9am', '10am', '11am', '12pm','1pm', '2pm', '3pm'
 
 var storeContent, pikeStoreTitle;
 
-//object example
 var store1stPike = {
   storeMin: 23,
   storeMax: 65,
   storeAvg:6.3,
-  customerCapacity:[],
   customerHours:hours,
+  customerCapacity:[],
   storeContent:[],
   customerGen : function (){
     for (i = 0; i < 15; i++) {
-      this.customerCapacity.push(Math.floor(Math.random()*(this.storeMax-this.storeMin)+this.storeMin*this.storeAvg))
-    }
-  },
-  total: store1stPike.customerCapacity.reduceRight(function(a,b){return a+b;})
-
-},
-
-  clientStoreInfo : function (){
-    for (i = 0; i < 15; i++){
-      storeContent[i] = document.createElement('div');
-      storeContent[i].textcontent = customerCapacity[i];
+      this.customerCapacity.push(Math.floor(Math.random()*(this.storeMax-this.storeMin)+this.storeMin*this.storeAvg));
     }
   }
 };
 store1stPike.customerGen();
 
-pikeStoreTitle = document.createElement('h2');
-document.createElement('ul');
-pikeStoreTitle.textcontent = '1st and Pike';
-
+var pikeTotal = store1stPike.customerCapacity.reduce(function(a,b){return a+b;});
 
 for (i = 0; i < 15; i++) {
   pikeStoreTitle = document.createElement('li');
   var predict1stPike = (hours[i] + ': ' + store1stPike.customerCapacity[i] + ' cookies');
   console.log(predict1stPike);
   pikeStoreTitle.textcontent = store1stPike.customerCapacity[i];}
-console.log('Total:' + Math.(store1stPike.customerCapacity) + ' cookies');
+console.log('Total:' + pikeTotal + ' cookies');
+
 
 var storeSeatacAirport = {
-  storeMin: 3,
-  storeMax: 24,
-  storeAvg:1.2,
-  customerCapacity:[],
+  storeMin: 23,
+  storeMax: 65,
+  storeAvg:6.3,
   customerHours:hours,
+  customerCapacity:[],
+  storeContent:[],
   customerGen : function (){
     for (i = 0; i < 15; i++) {
       this.customerCapacity.push(Math.floor(Math.random()*(this.storeMax-this.storeMin)+this.storeMin*this.storeAvg));
     }
   }
 };
+storeSeatacAirport.customerGen();
+
+var airportTotal = storeSeatacAirport.customerCapacity.reduce(function(a,b){return a+b;});
+
+for (i = 0; i < 15; i++) {
+  pikeStoreTitle = document.createElement('li');
+  var predictAirport = (hours[i] + ': ' + storeSeatacAirport.customerCapacity[i] + ' cookies');
+  console.log(predictAirport);
+  pikeStoreTitle.textcontent = storeSeatacAirport.customerCapacity[i];}
+console.log('Total:' + airportTotal + ' cookies');
+
 
 var storeSeattleCenter = {
-  storeMin: 11,
-  storeMax: 38,
-  storeAvg: 3.7,
-  customerCapacity:[],
+  storeMin: 23,
+  storeMax: 65,
+  storeAvg:6.3,
   customerHours:hours,
+  customerCapacity:[],
+  storeContent:[],
   customerGen : function (){
     for (i = 0; i < 15; i++) {
       this.customerCapacity.push(Math.floor(Math.random()*(this.storeMax-this.storeMin)+this.storeMin*this.storeAvg));
     }
   }
 };
+storeSeattleCenter.customerGen();
+
+var SeattleCenterTotal = storeSeattleCenter.customerCapacity.reduce(function(a,b){return a+b;});
+
+for (i = 0; i < 15; i++) {
+  pikeStoreTitle = document.createElement('li');
+  var predictSeattleCenter = (hours[i] + ': ' + storeSeattleCenter.customerCapacity[i] + ' cookies');
+  console.log(predictSeattleCenter);
+  pikeStoreTitle.textcontent = storeSeattleCenter.customerCapacity[i];}
+console.log('Total:' + SeattleCenterTotal + ' cookies');
+
 
 var storeCapitalHill = {
-  storeMin: 20,
-  storeMax: 38,
-  storeAvg:2.3,
-  customerCapacity:[],
+  storeMin: 23,
+  storeMax: 65,
+  storeAvg:6.3,
   customerHours:hours,
+  customerCapacity:[],
+  storeContent:[],
   customerGen : function (){
     for (i = 0; i < 15; i++) {
       this.customerCapacity.push(Math.floor(Math.random()*(this.storeMax-this.storeMin)+this.storeMin*this.storeAvg));
     }
   }
 };
+storeCapitalHill.customerGen();
+
+var capitalHillTotal = storeCapitalHill.customerCapacity.reduce(function(a,b){return a+b;});
+
+for (i = 0; i < 15; i++) {
+  pikeStoreTitle = document.createElement('li');
+  var predictCapitalHill = (hours[i] + ': ' + storeCapitalHill.customerCapacity[i] + ' cookies');
+  console.log(predictCapitalHill);
+  pikeStoreTitle.textcontent = storeCapitalHill.customerCapacity[i];}
+console.log('Total:' + capitalHillTotal + ' cookies');
+
 
 var storeAlki = {
-  storeMin: 2,
-  storeMax: 16,
-  storeAvg: 4.6,
-  customerCapacity:[],
+  storeMin: 23,
+  storeMax: 65,
+  storeAvg:6.3,
   customerHours:hours,
+  customerCapacity:[],
+  storeContent:[],
   customerGen : function (){
     for (i = 0; i < 15; i++) {
       this.customerCapacity.push(Math.floor(Math.random()*(this.storeMax-this.storeMin)+this.storeMin*this.storeAvg));
     }
   }
 };
+storeAlki.customerGen();
 
-var stores = [
-  store1stPike,
-  storeSeatacAirport,
-  storeSeattleCenter,
-  storeCapitalHill,
-  storeAlki
-];
+var AlkiTotal = storeAlki.customerCapacity.reduce(function(a,b){return a+b;});
+
+for (i = 0; i < 15; i++) {
+  pikeStoreTitle = document.createElement('li');
+  var predictAlki = (hours[i] + ': ' + storeAlki.customerCapacity[i] + ' cookies');
+  console.log(predictAlki);
+  pikeStoreTitle.textcontent = storeAlki.customerCapacity[i];}
+console.log('Total:' + AlkiTotal + ' cookies');
