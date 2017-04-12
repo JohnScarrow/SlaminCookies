@@ -3,7 +3,7 @@
 var i = 0;
 var hours = ['6am','7am','8am','9am', '10am', '11am', '12pm','1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
-var pikeStoreTitle, airportStoreTitle, seattleCenterStoreTitle, capitalHillStoreTitle, alkiStoreTitle;
+var storeContent, pikeStoreTitle, airportStoreTitle, seattleCenterStoreTitle, capitalHillStoreTitle, alkiStoreTitle;
 
 var store1stPike = {
   title: '1st and pike',
@@ -145,21 +145,29 @@ var stores = [
 
 i = 0;
 var j = 0;
-var storesUl, storesLi;
 
-var storesDiv = document.getElementById('stores');
+var storesUl = document.getElementById('stores');
 
-storesDiv.textContent = 'test';
+for (i = 0; i < stores.length; i++ ){
+  storeContent = document.getElementById('title');
+  storeContent.textContent = stores[i].title;
+  storeContent.setAttribute('id', 'title');
+}
 
-
-for (i = 0; i < stores.length; i++){
+var storesLi;
+var cookieLi;
+for (i = 0; i < (stores.length); i++ ){
+  storesLi = document.createElement('li');
+  storesLi.setAttribute('class', 'store');
+  storesUl.textContent = (stores[i].title);
   storesUl = document.createElement('ul');
-  storesUl.textContent = stores[i].title;
-  storesDiv.appendChild(storesUl);
-  for(j = 0; j < hours; j++){
-    storesLi = document.createElement('li');
-    storesLi.textContent = (stores[i].customerCapacity[j]);
-    storesUl.appendChild(storesLi);
-
-  }
+  storesUl.appendChild(storesLi);
+for (j = 0; j < hours.length; j++) {
+  console.log(stores[i].title, ' had ', stores[i].customerCapacity[j],' cookies sold');
+  cookieLi = document.createElement('li');
+  cookieLi.setAttribute('class', 'cookie-sales');
+  cookieLi.textContent = stores[i].customerCapacity[j];
+  storesLi.appendChild(cookieLi);
+  return cookieLi,storesLi
+}
 }
