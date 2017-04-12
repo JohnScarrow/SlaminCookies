@@ -150,18 +150,20 @@ var storesUl = document.getElementById('stores');
 
 for (i = 0; i < stores.length; i++ ){
   storeContent = document.getElementById('title');
-  storeContent.textContent = stores[i].title;
+  storeContent.textContent = 'Cookies';
   storeContent.setAttribute('id', 'title');
 }
 i = 0;
 var storesLi;
 var cookieLi;
 for (i = 0; i < (stores.length); i++ ){
-  storesLi = document.createElement('li');
   storesUl = document.createElement('ul');
-  storesLi.setAttribute('class', 'store');
   storesUl.textContent = stores[i].title;
+  storesLi = document.createElement('li');
   storesUl.appendChild(storesLi);
+  storesLi.setAttribute('class', 'store');
+
+
   for (j = 0; j < hours.length; j++) {
     console.log(stores[i].title, ' had ', stores[i].customerCapacity[j],' cookies sold');
     cookieLi = document.createElement('li');
@@ -170,43 +172,3 @@ for (i = 0; i < (stores.length); i++ ){
     storesLi.appendChild(cookieLi);
   }
 }
-
-  for (j = 0; j < hours.length; j++) {
-    console.log(stores[0].title, ' had ', stores[0].customerCapacity[j],' cookies sold');
-    cookieLi = document.createElement('li');
-    cookieLi.setAttribute('class', 'cookie-sales');
-    cookieLi.textContent = stores[0].customerCapacity[j];
-    storesLi.appendChild(cookieLi);
-  }
-
-  for (j = 0; j < hours.length; j++) {
-    console.log(stores[1].title, ' had ', stores[1].customerCapacity[j],' cookies sold');
-    cookieLi = document.createElement('li');
-    cookieLi.setAttribute('class', 'cookie-sales');
-    cookieLi.textContent = stores[1].customerCapacity[j];
-    storesLi.appendChild(cookieLi);
-  }
-
-  for (j = 0; j < hours.length; j++) {
-    console.log(stores[2].title, ' had ', stores[2].customerCapacity[j],' cookies sold');
-    cookieLi = document.createElement('li');
-    cookieLi.setAttribute('class', 'cookie-sales');
-    cookieLi.textContent = stores[2].customerCapacity[j];
-    storesLi.appendChild(cookieLi);
-  }
-
-  for (j = 0; j < hours.length; j++) {
-    console.log(stores[3].title, ' had ', stores[3].customerCapacity[j],' cookies sold');
-    cookieLi = document.createElement('li');
-    cookieLi.setAttribute('class', 'cookie-sales');
-    cookieLi.textContent = stores[3].customerCapacity[j];
-    storesLi.appendChild(cookieLi);
-  }
-
-  for (j = 0; j < hours.length; j++) {
-    console.log(stores[4].title, ' had ', stores[4].customerCapacity[j],' cookies sold');
-    cookieLi = document.createElement('li');
-    cookieLi.setAttribute('class', 'cookie-sales');
-    cookieLi.textContent = stores[4].customerCapacity[j];
-    storesLi.appendChild(cookieLi);
-  }
