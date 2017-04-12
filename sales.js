@@ -3,36 +3,30 @@
 var i = 0;
 var hours = ['6am','7am','8am','9am', '10am', '11am', '12pm','1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
-var pikeStoreTitle, airportStoreTitle, seattleCenterStoreTitle, capitalHillStoreTitle, alkiStoreTitle;
+//var pikeStoreTitle, airportStoreTitle, seattleCenterStoreTitle, capitalHillStoreTitle, alkiStoreTitle;
 
-var store1stPike = {
-  title: '1st and pike',
-  storeMin: 23,
-  storeMax: 65,
-  storeAvg:6.3,
-  customerHours:hours,
-  customerCapacity:[],
-  storeContent:[],
-  customerGen : function (){
-    for (i = 0; i < 15; i++) {
-      this.customerCapacity.push(Math.floor(Math.random()*(this.storeMax-this.storeMin)+this.storeMin*this.storeAvg));
-    }
-  }
-};
 function storeProp(title, min, max, avg){
-  title = '1st and pike',
+  this.title = title,
   this.storeMin = min,
-  storeMax = max,
-  storeAvg = avg,
-  customerHours = hours,
-  customerCapacity = [],
-  storeContent = [],
-  customerGen : function (){
+  this.storeMax = max,
+  this.storeAvg = avg,
+  this.customerHours = hours,
+  this.customerCapacity = [],
+  this.storeContent = [],
+  this.customerGen = function (){
     for (i = 0; i < 15; i++) {
       this.customerCapacity.push(Math.floor(Math.random()*(this.storeMax-this.storeMin)+this.storeMin*this.storeAvg));
     }
-  }
+  },
+  this.customerGen();
 }
+
+var store1stPike = new storeProp('1st and pike', 23, 65, 6.3);
+var storeSeatacAirport = new storeProp('SeaTac Airport', 3, 24, 1.2);
+var storeSeattleCenter = new storeProp('Seattle Center', 11, 38, 3.7);
+var storeCapitalHill = new storeProp('Capital Hill', 20, 38, 2.3);
+var storeAlki = new storeProp('Alki', 2, 16, 4.6);
+
 
 
 var stores = [store1stPike, storeSeatacAirport, storeSeattleCenter, storeCapitalHill, storeAlki];
