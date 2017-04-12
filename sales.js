@@ -154,12 +154,13 @@ storesDiv.textContent = 'test';
 
 for (i = 0; i < stores.length; i++){
   storesUl = document.createElement('ul');
+  storesUl.setAttribute('class', ('stores-Ul'+(i)));
   storesUl.textContent = stores[i].title;
   storesDiv.appendChild(storesUl);
   for(j = 0; j < hours; j++){
     storesLi = document.createElement('li');
     storesLi.textContent = (stores[i].customerCapacity[j]);
-    storesUl.appendChild(storesLi);
+    storesLi.appendChild(storesUl+(i));
 
   }
 }
