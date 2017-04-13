@@ -2,18 +2,20 @@
 <html>
   <head>
     <title></title>
+    <link href ="style.css" rel="stylesheet">
   </head>
   <body>
     <h1 id='title'>Slammin Cookies</h1>
     <form id="product-create">
-            <input name="storeTime" type="text" placeholder="time" />
-            <input name="storeMinAmount" type="number" placeholder="minAmount" />
-            <input name="storeMaxAmount" type="number" placeholder="maxAmount" />
+            <input name="storeName" type="text" placeholder="StoreName" />
+            <input name="storeMinAmount" type="number" placeholder="Min Cookies" />
+            <input name="storeMaxAmount" type="number" placeholder="Max Cookies" />
+            <input name="storeAvgAmount" type="number" placeholder="Average Coopies per Person" />
 
             <button type="submit"> add product </button>
           </form>
 
    <div id='stores'></div>
-    <script src='sales.js'></script>
+    <script src='app.js'></script>
   </body>
 </html>

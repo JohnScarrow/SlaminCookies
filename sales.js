@@ -21,6 +21,8 @@ function storeProp(title, min, max, avg){
   this.customerGen();
 }
 
+
+
 var store1stPike = new storeProp('1st and pike', 23, 65, 6.3);
 var storeSeatacAirport = new storeProp('SeaTac Airport', 3, 24, 1.2);
 var storeSeattleCenter = new storeProp('Seattle Center', 11, 38, 3.7);
@@ -89,9 +91,3 @@ for (j = 0; j < hours.length; j++){
   storesLi.setAttribute('class', ('stores-Li'+(j)));
   storesLi.textContent = (stores[4].customerCapacity[j]) + 'cookies';
   storesUl4.appendChild(storesLi);}
-
-//for(j = 0; j < hours; j++){
-  //storesLi = document.createElement('td');
-  //storesLi.textContent = (stores[i].customerCapacity[j]);
-  //storesUl0.appendChild(storesLi);
-//}
